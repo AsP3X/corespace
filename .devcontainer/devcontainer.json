@@ -1,0 +1,20 @@
+// See https://containers.dev/implementors/json_reference/ for configuration reference
+{
+	"name": "Corespace",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+"remoteUser": "node",
+"customizations": {
+	"vscode": {
+		"extensions": [
+			"bradlc.vscode-tailwindcss",
+			"saoudrizwan.claude-dev"
+		],
+		"settings": {
+			"workbench.sideBar.location": "right",
+			"files.eol": "\n"
+		}
+	}
+}
+}
