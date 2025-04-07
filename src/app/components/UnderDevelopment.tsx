@@ -1,32 +1,13 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
 
 export default function UnderDevelopment() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({
-        x: (e.clientX / window.innerWidth) * 20,
-        y: (e.clientY / window.innerHeight) * 20,
-      });
-    };
-
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, []);
-
   return (
     <div className="min-h-screen w-full bg-black flex items-center justify-center relative overflow-hidden">
       {/* Background gradient blur */}
       <div 
         className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20"
-        style={{
-          transform: `translate(${mousePosition.x}px, ${mousePosition.y}px)`,
-          transition: 'transform 0.2s ease-out',
-        }}
       />
       
       <motion.div 
@@ -58,7 +39,15 @@ export default function UnderDevelopment() {
           </div>
         </motion.div>
 
-        <h1 className="text-4xl md:text-5xl font-bold mb-6 pb-1 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400">
+        <h1 
+          className="text-4xl md:text-5xl font-bold mb-6 pb-1"
+          style={{
+            background: 'linear-gradient(to right, #a78bfa, #60a5fa)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text',
+          }}
+        >
           Coming Soon
         </h1>
         
@@ -67,7 +56,13 @@ export default function UnderDevelopment() {
           bringing you an experience that pushes the boundaries of what's possible.
         </p>
 
-        <div className="backdrop-blur-xl bg-white/5 rounded-2xl p-6 border border-white/10">
+        <div 
+          className="rounded-2xl p-6 border border-white/10"
+          style={{
+            backdropFilter: 'blur(16px)',
+            backgroundColor: 'rgba(255, 255, 255, 0.05)',
+          }}
+        >
           <p className="text-gray-300">
             Stay tuned for updates as we prepare to launch.
           </p>
