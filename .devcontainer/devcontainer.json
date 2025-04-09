@@ -4,17 +4,20 @@
 	"build": {
 		"dockerfile": "Dockerfile"
 	},
-"remoteUser": "node",
-"customizations": {
-	"vscode": {
-		"extensions": [
-			"bradlc.vscode-tailwindcss",
-			"saoudrizwan.claude-dev"
-		],
-		"settings": {
-			"workbench.sideBar.location": "right",
-			"files.eol": "\n"
+	"remoteUser": "node",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"bradlc.vscode-tailwindcss",
+				"saoudrizwan.claude-dev"
+			],
+			"settings": {
+				"workbench.sideBar.location": "right",
+				"files.eol": "\n"
+			}
 		}
-	}
-}
+	},
+	"features": {
+        "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+    }
 }
