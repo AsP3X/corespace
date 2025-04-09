@@ -4,12 +4,14 @@ FROM node:20-alpine AS base
 FROM base AS deps
 WORKDIR /app
 
+RUN npm install -g pnpm
 # Install dependencies based on the preferred package manager
-COPY package.json yarn.lock* ./
-RUN yarn install --frozen-lockfile
+COPY package.json pnpm-lock* ./
+RUN pnpm install --frozen-lockfile
 
 # Rebuild the source code only when needed
 FROM base AS builder
+RUN npm install -g pnpm
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
@@ -19,7 +21,7 @@ COPY . .
 # Uncomment the following line in case you want to disable telemetry during the build.
 ENV NEXT_TELEMETRY_DISABLED 1
 
-RUN yarn build
+RUN pnpm build
 
 # Production image, copy all the files and run next
 FROM base AS runner
