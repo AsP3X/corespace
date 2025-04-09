@@ -1,15 +1,15 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import Link from "next/link";
 
 export default function NavigationBar() {
     return (
         <div className='fixed top-0 left-0 bg-white w-full h-16 flex items-center z-50'>
             <span className='text-black text-2xl font-bold ml-6'>CoreSpace</span>
             <div className='flex items-center justify-center flex-grow'>
-                <button className='text-black text-lg font-bold mr-4'>Home</button>
-                <button className='text-black text-lg font-bold mr-4'>About</button>
-                <button className='text-black text-lg font-bold mr-4'>Contact</button>
+                <Link className='text-black text-lg font-bold mr-4' href="/">Home</Link>
+                <Link className='text-black text-lg font-bold mr-4' href="/about">About</Link>
+                <Link className='text-black text-lg font-bold mr-4' href="/contact">Contact</Link>
             </div>
             <div className='mr-6'>
                 <button className='text-black text-lg font-bold flex items-center'>
