@@ -1,25 +1,25 @@
 // See https://containers.dev/implementors/json_reference/ for configuration reference
 {
-	"name": "Corespace",
-	"build": {
-		"dockerfile": "Dockerfile"
-	},
-	"remoteUser": "node",
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"bradlc.vscode-tailwindcss",
-				"Continue.continue",
-				"dbaeumer.vscode-eslint",
-				"esbenp.prettier-vscode"
-			],
-			"settings": {
-				"workbench.sideBar.location": "right",
-				"files.eol": "\n"
-			}
-		}
-	},
-	"features": {
-        "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+  "name": "Corespace",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "remoteUser": "node",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "bradlc.vscode-tailwindcss",
+        "Continue.continue",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode"
+      ],
+      "settings": {
+        "workbench.sideBar.location": "right",
+        "files.eol": "\n"
+      }
     }
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+  }
 }

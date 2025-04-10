@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 
 services:
   # Development service
@@ -26,4 +26,4 @@ services:
       - "3000:3000"
     environment:
       - NODE_ENV=production
-    restart: always 
+    restart: always
