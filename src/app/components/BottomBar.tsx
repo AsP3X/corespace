@@ -4,7 +4,7 @@ const currentYear = new Date().getFullYear();
 
 export default function BottomBar() {
     return (
-        <footer className="bg-gray-900 text-gray-300">
+        <div className="bg-gray-900 text-gray-300">
             <div className="container mx-auto px-6 py-8">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {/* Left Column - Logo and Copyright */}
@@ -111,6 +111,6 @@ export default function BottomBar() {
                     </div>
                 </div>
             </div>
-        </footer>
+        </div>
     )
 }

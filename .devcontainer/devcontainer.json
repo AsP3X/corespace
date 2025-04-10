@@ -9,7 +9,9 @@
 		"vscode": {
 			"extensions": [
 				"bradlc.vscode-tailwindcss",
-				"Continue.continue"
+				"Continue.continue",
+				"dbaeumer.vscode-eslint",
+				"esbenp.prettier-vscode"
 			],
 			"settings": {
 				"workbench.sideBar.location": "right",
