@@ -16,7 +16,7 @@ export default function BottomBar() {
 
                             {/* Company Description */}
                             <p className="text-sm text-gray-400 pr-4">
-                                Creating innovative solutions for tomorrow's challenges.
+                                Creating innovative solutions for tomorrow&apos;s challenges.
                             We specialize in delivering high-quality products.
                             </p>
 
