@@ -9,7 +9,7 @@
 		"vscode": {
 			"extensions": [
 				"bradlc.vscode-tailwindcss",
-				"saoudrizwan.claude-dev"
+				"Continue.continue"
 			],
 			"settings": {
 				"workbench.sideBar.location": "right",
